@@ -18,8 +18,12 @@ const Lista = () => {
     };
 
 
-    console.log(inputValue);
+    const exclui = (id) => {
 
+        const newList = list.filter((item) => item.id !== id);
+        setList(newList);
+
+    }
 
     return (
         <div>
@@ -36,7 +40,7 @@ const Lista = () => {
                                 <p className="descricao">{item.text}</p>
                                 <div>
                                     <a><i class='bx bx-check-double'></i></a>
-                                    <a><i class='bx bxs-trash-alt'></i></a>
+                                    <a><i onClick={() => exclui(item.id)} class='bx bxs-trash-alt'></i></a>
                                 </div>
                             </div>
                         </li>
