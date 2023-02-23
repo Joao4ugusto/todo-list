@@ -7,40 +7,35 @@ const Lista = () => {
     const [inputValue, setInputValue] = useState("");
     const [list, setList] = useState([]);
 
-    const pegaInputValue = (event) => {
-        setInputValue(event.target.value);
-    };
+    const addInput = () => {
+        if (!inputValue) return inputValue("");
 
-    const pegaClick = () => {
-        const newItem = { text: inputValue };
-        setList([...list, newItem]);
-        setInputValue('');
-    };
+        const newInput = {
+            id: Math.random(),
+            inputValue: inputValue,
+        };
 
-
-    const exclui = (id) => {
-
-        const newList = list.filter((item) => item.id !== id);
-        setList(newList);
-
+        setList([...list, newInput]);
     }
+
+
 
     return (
         <div>
             <div className="Container container_input">
-                <input className="input" type={Text} placeholder="Digite sua tarefa" onChange={pegaInputValue}></input>
-                <button onClick={pegaClick}>Add</button>
+                <input className="input" type={Text} placeholder="Digite sua tarefa" onChange={(e) => setInputValue(e.target.value)}></input>
+                <button onClick={addInput}>Add</button>
             </div>
 
             <div className="Container container__Lista">
                 <ul>
-                    {list.map((item, index) => (
-                        <li className="Container__caixa" key={index}>
+                    {list.map((inputValue) => (
+                        <li id="id" className="Container__caixa" key={inputValue.id}>
                             <div className="Container__conteudo">
-                                <p className="descricao">{item.text}</p>
+                                <p className="descricao">{inputValue.inputValue}</p>
                                 <div>
                                     <a><i class='bx bx-check-double'></i></a>
-                                    <a><i onClick={() => exclui(item.id)} class='bx bxs-trash-alt'></i></a>
+                                    <a><i class='bx bxs-trash-alt'></i></a>
                                 </div>
                             </div>
                         </li>
