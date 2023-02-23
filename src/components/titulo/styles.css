@@ -1,0 +1,19 @@
+.Container {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    column-gap: 15px;
+}
+
+.Container_Titulo {
+    margin-top: 60px;
+    background: linear-gradient(90deg, #28A8A4 -10.95%, #00FF85 43.62%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -text-fill-color: transparent;
+}

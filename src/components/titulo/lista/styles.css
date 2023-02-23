@@ -1,0 +1,31 @@
+.container__Lista {
+    margin-top: 40px;
+}
+
+.Container__caixa {
+    width: 300px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    list-style: none;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.Container__conteudo {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+
+}
+
+.descricao {
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.bx {
+    color: black;
+    cursor: pointer;
+}
