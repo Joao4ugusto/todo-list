@@ -72,3 +72,8 @@ button {
 button:hover {
     opacity: 0.9;
 }
+
+.checked {
+    text-decoration-line: line-through;
+
+}
