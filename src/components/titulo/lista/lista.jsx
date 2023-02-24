@@ -4,6 +4,7 @@ import "./styles.css";
 
 const Lista = () => {
 
+
     const [inputValue, setInputValue] = useState("");
     const [list, setList] = useState([]);
 
@@ -25,6 +26,8 @@ const Lista = () => {
     }
 
 
+
+
     return (
         <div>
             <div className="Container container_input">
@@ -37,9 +40,8 @@ const Lista = () => {
                     {list.map((inputValue) => (
                         <li className="Container__caixa" key={inputValue.id}>
                             <div className="Container__conteudo">
-                                <p checked="true" className="descricao ">{inputValue.inputValue}</p>
+                                <p className="descricao ">{inputValue.inputValue}</p>
                                 <div>
-                                    <a><i onClick={() => certo(inputValue.id)} class='bx bx-check-double'></i></a>
                                     <a><i onClick={() => removeInput(inputValue.id)} class='bx bxs-trash-alt'></i></a>
                                 </div>
                             </div>
